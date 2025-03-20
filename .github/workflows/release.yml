@@ -28,45 +28,11 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
-      # - name: Run chart-releaser
-      #   uses: helm/chart-releaser-action@v1.6.0
-      #   with:
-      #     skip_existing: true
-      #   env:
-      #     CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
-      # - name: Run chart-releaser on develop
-      #   uses: helm/chart-releaser-action@v1.6.0
-      #   with:
-      #     skip_existing: true
-      #     charts_dir: charts/develop
-      #     pages_branch: gh-pages-develop
-      #   env:
-      #     CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
-      - name: Run chart-releaser on library
+      - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.6.0
         with:
           skip_existing: true
-          charts_dir: charts/library
-          # pages_branch: gh-pages-library
+          charts_dir: charts
+          pages_branch: gh-pages
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
-      - name: Run chart-releaser on operators
-        uses: helm/chart-releaser-action@v1.6.0
-        with:
-          skip_existing: true
-          charts_dir: charts/operators
-          # pages_branch: gh-pages-operators
-        env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
-      # - name: Run chart-releaser on stable
-      #   uses: helm/chart-releaser-action@v1.6.0
-      #   with:
-      #     skip_existing: true
-      #     charts_dir: charts/stable
-      #     pages_branch: gh-pages-stable
-      #   env:
-      #     CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
