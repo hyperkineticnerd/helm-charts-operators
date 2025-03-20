@@ -24,18 +24,18 @@ version: 0.9.0
 appVersion: "2.4.4"
 
 dependencies:
-- name: olm-operator
-  version: "1.0.2"
-  repository: "https://operator-charts.hyperkineticnerd.com/"
-  condition: istio.enable
-  alias: istio
-- name: olm-operator
-  version: "1.0.2"
-  repository: "https://operator-charts.hyperkineticnerd.com/"
-  condition: jaeger.enable
-  alias: jaeger
-- name: olm-operator
-  version: "1.0.2"
-  repository: "https://operator-charts.hyperkineticnerd.com/"
-  condition: kiali.enable
-  alias: kiali
+  - name: olm-operator
+    repository: https://stable-charts.hyperkineticnerd.com/
+    version: 1.2.0
+    alias: istio
+    condition: istio.enable
+  - name: olm-operator
+    repository: https://stable-charts.hyperkineticnerd.com/
+    version: 1.2.0
+    alias: jaeger
+    condition: jaeger.enable
+  - name: olm-operator
+    repository: https://stable-charts.hyperkineticnerd.com/
+    version: 1.2.0
+    alias: kiali
+    condition: kiali.enable

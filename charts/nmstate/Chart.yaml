@@ -25,6 +25,7 @@ appVersion: "1.16.0"
 
 dependencies:
   - name: olm-operator
-    repository: https://operator-charts.hyperkineticnerd.com/
+    repository: https://stable-charts.hyperkineticnerd.com
     version: 1.2.0
     alias: operator
+    condition: operator.enable
