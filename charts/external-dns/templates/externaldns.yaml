@@ -1,0 +1,10 @@
+---
+apiVersion: externaldns.olm.openshift.io/v1beta1
+kind: ExternalDNS
+metadata:
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+{{- include "external-dns-operator.provider" . | nindent 2 }}
+{{- include "external-dns-operator.zones" . | nindent 2 }}
+{{- include "external-dns-operator.source" . | nindent 2 }}

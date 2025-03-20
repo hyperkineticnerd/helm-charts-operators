@@ -1,0 +1,18 @@
+
+operator:
+  enable: true
+  channel: stable-v26.0
+  installPlanApproval: Automatic
+  name: rhbk-operator
+  namespace: keycloak
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  additionalNamespaces:
+    - keycloak
+
+keycloakSpec:
+  hostname: 
+    hostname: example.org
+  http:
+    tlsSecret: my-tls-secret
+  instances: 1

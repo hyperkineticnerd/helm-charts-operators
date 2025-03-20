@@ -1,0 +1,10 @@
+# Default values for kubernetes-nmstate-operator.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+operator:
+  channel: stable
+  installPlanApproval: Automatic
+  name: kubernetes-nmstate-operator
+  source: community-operators
+  sourceNamespace: openshift-marketplace

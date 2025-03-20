@@ -1,0 +1,12 @@
+---
+apiVersion: lvm.topolvm.io/v1alpha1
+kind: LVMCluster
+metadata:
+  name: lvms-vg1
+  namespace: openshift-storage
+spec:
+  storage:
+{{- with .Values.deviceClasses -}}
+    deviceClasses:
+{{ toYaml . | nindent 6 }}
+{{- end }}

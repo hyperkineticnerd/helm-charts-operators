@@ -1,0 +1,10 @@
+# Default values for openshift-cert-manager-operator.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+operator:
+  channel: stable-v1
+  installPlanApproval: Automatic
+  name: openshift-cert-manager-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace

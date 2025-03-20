@@ -1,0 +1,10 @@
+# Default values for lvms-operator.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+operator:
+  channel: stable-4.12
+  installPlanApproval: Automatic
+  name: lvms-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace

@@ -1,0 +1,10 @@
+# Default values for cincinnati-operator.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+operator:
+  channel: v1
+  installPlanApproval: Automatic
+  name: cincinnati-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace

@@ -1,0 +1,11 @@
+operator:
+  channel: stable
+  installPlanApproval: Automatic
+  name: kubernetes-nmstate-operator
+  namespace: openshift-nmstate
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  additionalNamespaces: # []
+    - openshift-nmstate
+
+nmstateSpec: {}

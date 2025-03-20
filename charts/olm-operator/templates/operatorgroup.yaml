@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: {{ printf "%s-operatorgroup" .Values.name }}
+  namespace: {{ .Values.namespace }}
+spec:
+{{- with .Values.additionalNamespaces }}
+  targetNamespaces:
+    {{ toYaml . }}
+{{- end }}
+  upgradeStrategy: Default
