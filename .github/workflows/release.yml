@@ -30,7 +30,7 @@ jobs:
 
       - name: Add Dependency Helm Repo
         run: |
-          helm repo add hyperkineticnerd-operator-charts https://operator-charts.hyperkineticnerd.com
+          helm repo add hyperkineticnerd-stable-charts https://stable-charts.hyperkineticnerd.com
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.6.0
