@@ -4,6 +4,9 @@ kind: ExternalDNS
 metadata:
   name: {{ .Release.Name }}
   namespace: {{ .Release.Namespace }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "90"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
 {{- include "external-dns-operator.provider" . | nindent 2 }}
 {{- include "external-dns-operator.zones" . | nindent 2 }}
