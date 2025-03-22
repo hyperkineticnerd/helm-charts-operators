@@ -36,6 +36,22 @@ entries:
   external-dns:
   - apiVersion: v2
     appVersion: 1.1.5
+    created: "2025-03-22T22:01:11.097436513Z"
+    dependencies:
+    - alias: operator
+      condition: operator.enable
+      name: olm-operator
+      repository: https://stable-charts.hyperkineticnerd.com
+      version: 1.2.0
+    description: A Helm chart for Kubernetes
+    digest: 320547b811b6844d33cdec960df6dba4d0cada8b5ad9f9cfb1b576f3d14328bd
+    name: external-dns
+    type: application
+    urls:
+    - https://github.com/hyperkineticnerd/helm-charts-operators/releases/download/external-dns-0.9.1/external-dns-0.9.1.tgz
+    version: 0.9.1
+  - apiVersion: v2
+    appVersion: 1.1.5
     created: "2025-03-20T15:19:48.263490119Z"
     dependencies:
     - alias: operator
@@ -166,4 +182,4 @@ entries:
     urls:
     - https://github.com/hyperkineticnerd/helm-charts-operators/releases/download/rhbk-0.9.0/rhbk-0.9.0.tgz
     version: 0.9.0
-generated: "2025-03-22T21:51:14.979774159Z"
+generated: "2025-03-22T22:01:11.097449287Z"
