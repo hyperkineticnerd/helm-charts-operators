@@ -5,6 +5,8 @@ kind: TridentBackendConfig
 metadata:
   name: {{ $v.name }}
   namespace: trident
+  annotations:
+    argocd.argoproj.io/sync-wave: "70"
 {{- with $v.spec }}
 spec:
 {{- toYaml . | nindent 2 }}
