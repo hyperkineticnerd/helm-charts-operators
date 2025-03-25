@@ -1,0 +1,12 @@
+{{- range $v := .Values.tridentBackendConfigs }}
+---
+apiVersion: trident.netapp.io/v1
+kind: TridentBackendConfig
+metadata:
+  name: {{ $v.name }}
+  namespace: trident
+{{- with $v.spec }}
+spec:
+{{- toYaml . | nindent 2 }}
+{{- end }}
+{{- end }}

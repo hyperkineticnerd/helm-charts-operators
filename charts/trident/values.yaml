@@ -1,0 +1,17 @@
+operator:
+  name: trident-operator
+  install:
+    installPlanApproval: Automatic
+  catalog:
+    channel: stable
+    source: community-operators
+    sourceNamespace: openshift-marketplace
+  operatorGroup:
+    enable: false
+    namespace: openshift-operators
+    additionalNamespaces: # []
+      - openshift-operators
+
+tridentBackendConfigs:
+  - name: backend-tbc-ontap-nas
+    spec: {}
