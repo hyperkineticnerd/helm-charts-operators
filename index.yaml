@@ -208,4 +208,21 @@ entries:
     urls:
     - https://github.com/hyperkineticnerd/helm-charts-operators/releases/download/rhbk-0.9.0/rhbk-0.9.0.tgz
     version: 0.9.0
-generated: "2025-03-25T00:38:31.870304595Z"
+  trident:
+  - apiVersion: v2
+    appVersion: 24.10.1
+    created: "2025-03-25T00:50:22.524878558Z"
+    dependencies:
+    - alias: operator
+      condition: operator.enable
+      name: olm-operator
+      repository: https://operator-charts.hyperkineticnerd.com
+      version: 1.3.0
+    description: A Helm chart for Kubernetes
+    digest: 26d67fda8375edfe25565fcd4b39c6b5a5a51f090e744a2c3e855b45ea04f9ee
+    name: trident
+    type: application
+    urls:
+    - https://github.com/hyperkineticnerd/helm-charts-operators/releases/download/trident-0.1.0/trident-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-03-25T00:50:22.524903094Z"
