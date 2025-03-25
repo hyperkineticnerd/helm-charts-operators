@@ -2,11 +2,17 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-channel: stable
-installPlanApproval: Automatic
+enable: true
+
 name: my-operator
-namespace: my-operator-namespace
-source: my-operator-index
-sourceNamespace: olm
-additionalNamespaces: # []
-  - my-managed-namespace
+install:
+  installPlanApproval: Automatic
+catalog:
+  channel: stable
+  source: my-operator-index
+  sourceNamespace: olm
+operatorGroup:
+  enable: true
+  namespace: my-operator-namespace
+  additionalNamespaces: # []
+    - my-managed-namespace

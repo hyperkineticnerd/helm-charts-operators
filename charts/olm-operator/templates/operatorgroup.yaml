@@ -1,13 +1,16 @@
+{{- if .Values.operatorGroup.enable }}
+---
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
   name: {{ printf "%s-operatorgroup" .Values.name }}
-  namespace: {{ .Values.namespace }}
+  namespace: {{ .Values.operatorGroup.namespace }}
   annotations:
     argocd.argoproj.io/sync-wave: "-70"
 spec:
-{{- with .Values.additionalNamespaces }}
+{{- with .Values.operatorGroup.additionalNamespaces }}
   targetNamespaces:
     {{ toYaml . }}
 {{- end }}
   upgradeStrategy: Default
+{{- end }}
